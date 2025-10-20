@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/auth.ts": {
+      "maxDuration": 10
+    },
+    "api/callback.ts": {
+      "maxDuration": 10
+    }
+  }
+}
