@@ -3,7 +3,7 @@ backend:
   name: github
   repo: ralph1985/ayto-belmontejo-astro
   branch: main
-  base_url: https://ayto-belmontejo-astro.vercel.app
+  base_url: https://ayto-belmontejo-astro.vercel.app/api
 
 local_backend: true
 
