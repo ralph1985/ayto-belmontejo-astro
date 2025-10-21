@@ -4,22 +4,22 @@ import client from "@data/client.json";
 import Landing from "@components/Landing.astro";
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
-import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import landingImage from "@assets/images/landing.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 import { getImage } from "astro:assets";
-const optimizedImage = await getImage({src: landingImage, format: 'avif'})
+const optimizedImage = await getImage({ src: landingImage, format: "avif" });
 ---
 
 <BaseLayout
-  title="Contact"
-  description="Meta description for the page"
-  preloadedImage = {optimizedImage}
+  title="Contacto - Ayuntamiento de Belmontejo"
+  description="Ponte en contacto con el Ayuntamiento de Belmontejo. Información de contacto, dirección y formulario para consultas ciudadanas."
+  preloadedImage={optimizedImage}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
   <!-- ============================================ -->
 
-  <Landing 
-    title="Contact"
+  <Landing
+    title="Contacto"
     image={optimizedImage}
   />
 
@@ -29,77 +29,96 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
 
   <section id="cs-contact">
     <div class="cs-container">
-      <form id="cs-form" name="Contact Form" method="post">
+      <form
+        id="cs-form"
+        name="Contact Form"
+        method="post"
+      >
         <div class="cs-content">
-          <span class="cs-topper">Contact</span>
-          <h2 class="cs-title">Get in Touch</h2>
+          <span class="cs-topper">Contacto</span>
+          <h2 class="cs-title">Ponte en contacto con nosotros</h2>
           <p class="cs-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus
-            elementum ullamcorper ipsum porttitor aliquam. Id magna urna
-            ultrices odio pulvinar. Sed ut.
+            El Ayuntamiento de Belmontejo está aquí para atender tus consultas,
+            sugerencias y trámites administrativos. No dudes en contactarnos
+            para cualquier asunto relacionado con nuestro municipio. Estaremos
+            encantados de ayudarte.
           </p>
         </div>
         <label>
-          Name
+          Nombre
           <input
             required
             type="text"
             id="name"
             name="name"
-            placeholder="Name"
+            placeholder="Nombre completo"
           />
         </label>
         <label>
-          Email
+          Correo electrónico
           <input
             required
-            type="text"
+            type="email"
             id="email"
             name="email"
-            placeholder="Email"
+            placeholder="tu@email.com"
           />
         </label>
         <label>
-          Phone
+          Teléfono
           <input
             required
-            type="text"
+            type="tel"
             id="phone"
             name="phone"
-            placeholder="Phone"
+            placeholder="Número de teléfono"
           />
         </label>
         <label>
-          How Did You Find Us
+          Asunto
           <input
             type="text"
             id="find"
-            name="find-us"
-            placeholder="How did you find us?"
+            name="subject"
+            placeholder="Motivo de la consulta"
           />
         </label>
         <label class="cs-label-message">
-          Message
+          Mensaje
           <textarea
             required
             name="Message"
             id="message"
-            placeholder="Write message..."></textarea>
+            placeholder="Escribe tu mensaje aquí..."
+          ></textarea>
         </label>
-        <button class="cs-button-solid" type="submit">Submit Message</button>
+        <button
+          class="cs-button-solid"
+          type="submit"
+          >Enviar mensaje</button
+        >
       </form>
       <div class="cs-right-section">
         <!--Email-->
-        <span class="cs-header">Email</span>
-        <a class="cs-link" href={`mailto:${client.email}`}>{client.email}</a>
+        <span class="cs-header">Correo electrónico</span>
+        <a
+          class="cs-link"
+          href={`mailto:${client.email}`}
+          >{client.email}</a
+        >
         <!--Phone-->
-        <span class="cs-header">Phone</span>
-        <a class="cs-link" href={`tel:${client.phoneForTel}`}
+        <span class="cs-header">Teléfono</span>
+        <a
+          class="cs-link"
+          href={`tel:${client.phoneForTel}`}
           >{client.phoneFormatted}</a
         >
         <!--Address-->
-        <span class="cs-header">Address</span>
-        <a class="cs-link" href={client.address.mapLink}>
+        <span class="cs-header">Dirección</span>
+        <a
+          class="cs-link"
+          href={client.address.mapLink}
+        >
           {client.address.lineOne},
           <br />
           {client.address.lineTwo},
