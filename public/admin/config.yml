@@ -3,7 +3,9 @@ backend:
   name: github
   repo: ralph1985/ayto-belmontejo-astro
   branch: main
-  base_url: https://ayto-belmontejo-astro.vercel.app/api
+  site_domain: ayto-belmontejo-astro.vercel.app
+  base_url: https://ayto-belmontejo-astro.vercel.app
+  auth_endpoint: oauth
 
 local_backend: true
 
