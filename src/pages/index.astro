@@ -4,15 +4,15 @@ import CTA from "@components/CTA.astro";
 import FAQ from "@components/FAQ.astro";
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
-import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import landingImage from "@assets/images/landing.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 import { getImage } from "astro:assets";
-const optimizedImage = await getImage({src: landingImage, format: 'avif'})
+const optimizedImage = await getImage({ src: landingImage, format: "avif" });
 ---
 
 <BaseLayout
   title="Pixel Perfect Websites"
   description="Meta description for the page"
-  preloadedImage = {optimizedImage}
+  preloadedImage={optimizedImage}
 >
   <!-- ============================================ -->
   <!--                    Hero                      -->
@@ -22,13 +22,22 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
     <div class="cs-container">
       <div class="cs-flex-group">
         <span class="cs-topper">Intermediate Kit</span>
-        <h1 class="cs-title">Intermediate Astro v5 <br/> Decap CMS</h1>
+        <h1 class="cs-title">Intermediate Astro v5 <br /> Decap CMS</h1>
         <p class="cs-text">
-          This intermediate kit includes a pre-configured Astro environment, which
-allows for repeated components, centralized data and greater room to scale as your clients grow. Decap CMS has been integrated to run a blog.
+          This intermediate kit includes a pre-configured Astro environment,
+          which allows for repeated components, centralized data and greater
+          room to scale as your clients grow. Decap CMS has been integrated to
+          run a blog.
         </p>
-        <a href="/about" class="cs-button-solid">Explore More</a>
-        <a href="/contact" class="cs-button-transparent">
+        <a
+          href="/sobre-el-pueblo"
+          class="cs-button-solid"
+          >Explore More</a
+        >
+        <a
+          href="/contacto"
+          class="cs-button-transparent"
+        >
           <img
             class="cs-img"
             loading="lazy"
@@ -50,7 +59,10 @@ allows for repeated components, centralized data and greater room to scale as yo
         media="(max-width: 600px)"
         srcset="/assets/images/hero-m.webp"
       />
-      <source media="(min-width: 601px)" srcset="/assets/images/hero.jpg" />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/hero.jpg"
+      />
       <img
         aria-hidden="true"
         decoding="async"
@@ -61,14 +73,16 @@ allows for repeated components, centralized data and greater room to scale as yo
         loading="eager"
       />
     </picture>
-
   </section>
 
   <!-- ============================================ -->
   <!--                  Services                    -->
   <!-- ============================================ -->
 
-  <section id="services" class="services">
+  <section
+    id="services"
+    class="services"
+  >
     <div class="card">
       <picture>
         <img
@@ -202,7 +216,11 @@ allows for repeated components, centralized data and greater room to scale as yo
             height="77"
           />
         </div>
-        <a href="/about" class="cs-button-solid">More About Us</a>
+        <a
+          href="/sobre-el-pueblo"
+          class="cs-button-solid"
+          >More About Us</a
+        >
       </div>
     </div>
   </section>
@@ -472,15 +490,19 @@ allows for repeated components, centralized data and greater room to scale as yo
           </picture>
         </div>
       </div>
-      <a href="/projects" class="cs-button-solid">View all projects</a>
+      <a
+        href="/projects"
+        class="cs-button-solid"
+        >View all projects</a
+      >
     </div>
   </section>
 
-    <!-- ============================================ -->
+  <!-- ============================================ -->
   <!--                    FAQ                       -->
   <!-- ============================================ -->
   <FAQ />
-  
+
   <!-- ============================================ -->
   <!--                   Reviews                    -->
   <!-- ============================================ -->
@@ -563,7 +585,10 @@ allows for repeated components, centralized data and greater room to scale as yo
           />
         </li>
       </ul>
-      <a aria-label="read more reviews" href="/reviews" class="cs-button-solid"
+      <a
+        aria-label="read more reviews"
+        href="/reviews"
+        class="cs-button-solid"
         >Our Reviews</a
       >
     </div>

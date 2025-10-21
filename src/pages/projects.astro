@@ -4,21 +4,21 @@ import CTA from "@components/CTA.astro";
 import Landing from "@components/Landing.astro";
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
-import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import landingImage from "@assets/images/landing.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 import { getImage } from "astro:assets";
-const optimizedImage = await getImage({src: landingImage, format: 'avif'})
+const optimizedImage = await getImage({ src: landingImage, format: "avif" });
 ---
 
 <BaseLayout
   title="Projects"
   description="Meta description for the page"
-  preloadedImage = {optimizedImage}
+  preloadedImage={optimizedImage}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
   <!-- ============================================ -->
 
-  <Landing 
+  <Landing
     title="All projects"
     image={optimizedImage}
   />
@@ -215,7 +215,11 @@ const optimizedImage = await getImage({src: landingImage, format: 'avif'})
           <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
         </div>
       </div>
-      <a href="/contact" class="cs-button-solid">Get Free Quote</a>
+      <a
+        href="/contacto"
+        class="cs-button-solid"
+        >Get Free Quote</a
+      >
     </div>
   </section>
   <CTA />
