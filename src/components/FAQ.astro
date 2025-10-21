@@ -1,10 +1,8 @@
 <section id="faq-1741">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">Frequently Asked Questions</span>
-      <h2 class="cs-title">
-        In consequat tincidunt turpis sit amet imperdiet.
-      </h2>
+      <span class="cs-topper">Preguntas frecuentes</span>
+      <h2 class="cs-title">Todo lo que necesitas saber sobre Belmontejo</h2>
     </div>
     <div class="cs-flex-group">
       <ul class="cs-faq-group">
@@ -12,53 +10,102 @@
         <li class="cs-faq-item active">
           <button class="cs-button">
             <span class="cs-button-text">
-              How do I start a kitchen design project with you?
+              ¿Dónde se encuentra Belmontejo?
             </span>
           </button>
           <p class="cs-item-text">
-            To begin your kitchen design project, simply reach out to us through
-            our contact form or give us a call. We'll set up an initial
-            consultation to understand your needs, preferences, and budget. From
-            there, we'll guide you through the process, from design concepts to
-            installation.
+            Belmontejo se sitúa en la provincia de Cuenca, en la comunidad
+            autónoma de Castilla‑La Mancha, formando parte de la comarca de la
+            Manchuela conquense.
           </p>
         </li>
         <li class="cs-faq-item">
           <button class="cs-button">
             <span class="cs-button-text">
-              What payment methods do you accept?
+              ¿Cuál es la altitud y el entorno geográfico del pueblo?
             </span>
           </button>
           <p class="cs-item-text">
-            We accept a variety of payment methods including major credit cards,
-            bank transfers, and financing options. Our team will work with you
-            to find the best payment plan that suits your project.
+            El municipio está situado a unos 878 m sobre el nivel del mar. El
+            terreno es ondulado, típico de la transición entre la Mancha más
+            plana y la Serranía de Cuenca.
           </p>
         </li>
         <li class="cs-faq-item">
           <button class="cs-button">
             <span class="cs-button-text">
-              How can I track the progress of my kitchen design?
+              ¿Cuántos habitantes tiene Belmontejo?
             </span>
           </button>
           <p class="cs-item-text">
-            Once your project begins, you'll receive regular updates from your
-            dedicated project manager. You can also track progress through our
-            online portal, where you can view timelines, design approvals, and
-            other key milestones.
+            Según datos recientes de enero de 2024, Belmontejo tiene una
+            población aproximada de 129 habitantes, manteniendo ese encanto de
+            pueblo pequeño con alma grande.
           </p>
         </li>
         <li class="cs-faq-item">
           <button class="cs-button">
             <span class="cs-button-text">
-              What is your return policy for custom cabinetry?
+              ¿Cómo se puede llegar al municipio?
             </span>
           </button>
           <p class="cs-item-text">
-            Due to the custom nature of our cabinetry, returns are handled on a
-            case-by-case basis. We strive for complete customer satisfaction and
-            will work with you to resolve any issues that may arise. Please
-            refer to our full return policy for more details.
+            Se puede acceder en coche por la carretera principal que atraviesa
+            la zona, principalmente mediante la vía N-420. Si vienes en
+            transporte público, conviene verificar horarios de autobuses desde
+            Cuenca u otras localidades cercanas.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              ¿Qué puedes ver o hacer en Belmontejo?
+            </span>
+          </button>
+          <p class="cs-item-text">
+            Aunque es un pueblo pequeño, tiene varios atractivos: la iglesia de
+            Nuestra Señora de la Asunción, las fuentes tradicionales ("fuente de
+            arriba" y "fuente de abajo"), rutas para caminar y el entorno
+            natural que lo rodea.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              ¿Cuál es la mejor época para visitar?
+            </span>
+          </button>
+          <p class="cs-item-text">
+            La primavera suele ser una excelente época por el clima templado y
+            la naturaleza en flor. No obstante, cada estación muestra su
+            encanto: los paisajes cambian y la tranquilidad del lugar se aprecia
+            en cualquier momento del año.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              ¿Dónde puedo alojarme o comer en el pueblo?
+            </span>
+          </button>
+          <p class="cs-item-text">
+            Hay ofertas de turismo rural en la zona de Belmontejo, aunque siendo
+            un municipio con población reducida, la oferta no es tan amplia como
+            en grandes núcleos urbanos. Te aconsejamos consultar con antelación
+            disponibilidad de alojamiento y servicios de restauración.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              ¿Qué trámites o servicios municipales están disponibles?
+            </span>
+          </button>
+          <p class="cs-item-text">
+            El Ayuntamiento de Belmontejo facilita información de contacto,
+            dirección, teléfono y procedimientos municipales básicos. Para otros
+            trámites puede ser necesario acudir a la sede electrónica o la
+            Diputación provincial.
           </p>
         </li>
       </ul>
@@ -72,8 +119,9 @@
 <!-- As a consequence, there is no need to use the defer attribute when loading a module script because modules are deferred automatically. -->
 
 <script>
-// Astro:page-load wrapper for View Transitions purposes
-document.addEventListener('astro:page-load', () => { // Makes the script available after navigating to a new page.
+  // Astro:page-load wrapper for View Transitions purposes
+  document.addEventListener("astro:page-load", () => {
+    // Makes the script available after navigating to a new page.
     const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
     for (const item of faqItems) {
       const onClick = () => {
