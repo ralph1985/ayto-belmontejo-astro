@@ -1,6 +1,6 @@
 [
   {
-    "key": "Home",
+    "key": "Inicio",
     "url": "/",
     "children": []
   },
@@ -10,16 +10,16 @@
     "children": []
   },
   {
-    "key": "Projects",
-    "url": "/projects/",
+    "key": "Proyectos",
+    "url": "/proyectos/",
     "children": [
       {
-        "key": "Project 1",
-        "url": "/projects/project-1/"
+        "key": "Proyecto 1",
+        "url": "/proyectos/proyecto-1/"
       },
       {
-        "key": "Project 2",
-        "url": "/projects/project-2/"
+        "key": "Proyecto 2",
+        "url": "/proyectos/proyecto-2/"
       }
     ]
   },
