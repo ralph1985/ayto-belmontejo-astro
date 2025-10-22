@@ -32,5 +32,11 @@
     "key": "Blog",
     "url": "/blog/",
     "children": []
+  },
+  {
+    "key": "Administración",
+    "url": "/admin",
+    "children": [],
+    "isAdmin": true
   }
 ]

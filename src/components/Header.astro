@@ -2,6 +2,16 @@
 import navData from "@data/navData.json";
 import { Icon } from "astro-icon/components";
 import DarkModeToggle from "@components/DarkModeToggle.astro";
+
+// Filter navigation data to show admin menu only when enabled
+// TODO: esto me pide unificarlo en un sólo sitio ya que está repetido tanto en el Header como en el Footer
+const showAdminMenu = import.meta.env.PUBLIC_SHOW_ADMIN_MENU === "true";
+const filteredNavData = navData.filter((entry) => {
+  if (entry.isAdmin) {
+    return showAdminMenu;
+  }
+  return true;
+});
 ---
 
 <!-- ============================================ --><!--                 Navigation                   --><!-- ============================================ -->
@@ -60,7 +70,7 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
           class="cs-ul"
         >
           {
-            navData.map((entry) => (
+            filteredNavData.map((entry) => (
               <li
                 class:list={[
                   "cs-li",
@@ -94,6 +104,8 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
                     aria-current={
                       Astro.url.pathname === entry.url ? "page" : undefined
                     }
+                    target={entry.isAdmin ? "_blank" : undefined}
+                    rel={entry.isAdmin ? "noopener noreferrer" : undefined}
                   >
                     {entry.key}
                   </a>
