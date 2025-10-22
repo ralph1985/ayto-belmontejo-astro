@@ -3,8 +3,8 @@ backend:
   name: github
   repo: ralph1985/ayto-belmontejo-astro
   branch: main
-  site_domain: ayto-belmontejo-astro.vercel.app
-  base_url: https://ayto-belmontejo-astro.vercel.app
+  site_domain: develop-ayto-belmontejo-astro.vercel.app
+  base_url: https://develop-ayto-belmontejo-astro.vercel.app
   auth_endpoint: oauth
 
 local_backend: true
@@ -13,7 +13,7 @@ local_backend: true
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Add site link in DecapCMS (optional)
-site_url: https://ayto-belmontejo-astro.vercel.app
+site_url: https://develop-ayto-belmontejo-astro.vercel.app
 
 media_folder: src/assets/images/blog # Location where files will be stored in the repo - we store them in src so that Astro can optimize them.
 public_folder: src/assets/images/blog # Ensure that this path is the same as the media_folder path above.
