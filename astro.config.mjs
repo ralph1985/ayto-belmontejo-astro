@@ -6,7 +6,7 @@ import vercel from "@astrojs/vercel/serverless";
 import decapCmsOauth from "astro-decap-cms-oauth";
 
 // Check if admin should be enabled based on environment variable
-const adminEnabled = process.env.PUBLIC_SHOW_ADMIN_MENU === "true";
+const adminEnabled = process.env.PUBLIC_ADMIN_MENU === "true";
 
 // TODO: meter "site" en una variable de entorno o un fichero de configuración para ponerlo sólo 1 vez
 export default defineConfig({

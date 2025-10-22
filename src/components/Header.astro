@@ -5,7 +5,7 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
 
 // Filter navigation data to show admin menu only when enabled
 // TODO: esto me pide unificarlo en un sólo sitio ya que está repetido tanto en el Header como en el Footer
-const showAdminMenu = import.meta.env.PUBLIC_SHOW_ADMIN_MENU === "true";
+const showAdminMenu = import.meta.env.PUBLIC_ADMIN_MENU === "true";
 const filteredNavData = navData.filter((entry) => {
   if (entry.isAdmin) {
     return showAdminMenu;

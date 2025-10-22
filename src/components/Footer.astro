@@ -6,7 +6,7 @@ import { getCurrentYear } from "@js/utils";
 const currentYear = getCurrentYear();
 
 // Filter navigation data to show admin menu only when enabled
-const showAdminMenu = import.meta.env.PUBLIC_SHOW_ADMIN_MENU === "true";
+const showAdminMenu = import.meta.env.PUBLIC_ADMIN_MENU === "true";
 const filteredNavData = navData.filter((entry) => {
   if (entry.isAdmin) {
     return showAdminMenu;
