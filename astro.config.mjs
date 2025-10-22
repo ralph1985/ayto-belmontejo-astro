@@ -10,7 +10,7 @@ const adminEnabled = process.env.PUBLIC_ADMIN_MENU === "true";
 
 // TODO: meter "site" en una variable de entorno o un fichero de configuración para ponerlo sólo 1 vez
 export default defineConfig({
-  site: "https://ayto-belmontejo-astro.vercel.app/",
+  site: "https://develop-ayto-belmontejo-astro.vercel.app/",
   output: "server",
   adapter: vercel(),
   integrations: [
